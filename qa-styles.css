@@ -1812,6 +1812,8 @@ input[type="submit"], button {
 
 .qa-form-tall-text {
 	width: 100%;
+	background: #3d3d3d;
+	border: 1px solid #5d5d5d;
 }
 
 .qa-form-tall-number, .qa-form-wide-number {
@@ -1856,16 +1858,14 @@ input[type="submit"], button {
 }
 
 .qa-form-tall-button-save, .qa-form-wide-button-save, .qa-form-wide-button-saverecalc,
-.qa-form-tall-button-ask, .qa-form-tall-button-answer {
+.qa-form-tall-button-ask, .qa-form-tall-button-answer, input.qa-form-tall-button.qa-form-tall-button-comment {
 	background: transparent;
 	border: 1px solid #069;
+	box-shadow: 0 0 14px #069;
 }
-.qa-form-tall-button-save:hover, .qa-form-tall-button-save:focus,
-.qa-form-wide-button-save:hover, .qa-form-wide-button-save:focus,
-.qa-form-wide-button-saverecalc:hover, .qa-form-wide-button-saverecalc:focus,
-.qa-form-tall-button-ask:hover, .qa-form-tall-button-ask:focus,
-.qa-form-tall-button-answer:hover, .qa-form-tall-button-answer:focus {
-	background-color: #2ecc71;
+
+.qa-form-tall-button-ask {
+
 }
 
 .qa-form-tall-button-cancel,
@@ -1958,7 +1958,22 @@ input[type="submit"], button {
 .qa-template-user .qa-form-tall-buttons {
 	border-bottom: none;
 	padding-bottom: 0;
+	display: flex;
 }
+
+.qa-form-wide-buttons input {
+	margin-right: .5rem;
+}
+
+.qa-form-tall-buttons .qa-form-tall-button-post, input.qa-form-tall-button.qa-form-tall-button-send {
+	float: right;
+	border: 1px solid #3d3d3d;
+	width: 3.9rem;
+	height: 1.7rem;
+	text-indent: -9999px;
+	background: url(images/icons/send.png) no-repeat 1rem 0;
+}
+
 .qa-template-user .qa-form-wide-label {
 	min-width: 110px;
 	width: auto;
@@ -1977,11 +1992,45 @@ input[type="submit"], button {
 .qa-part-form-profile .qa-form-wide-button-approve:hover, .qa-part-form-profile .qa-form-wide-button-approve:focus {
 	background-color: #2ecc71;
 }
-.qa-part-form-profile .qa-form-wide-button-block {
-	background: #e74c3c none;
+
+.qa-form-wide-buttons .qa-form-wide-button-account, .qa-form-wide-buttons .qa-form-wide-button-edit {
+	text-indent: -9999px;
+	width: 3.9rem;
+	height: 2.2rem;
+	border: 1px solid #3d3d3d;
+	background: url(images/icons/edit-user.png) no-repeat 1rem 0;
 }
-.qa-part-form-profile .qa-form-wide-button-block:hover, .qa-part-form-profile .qa-form-wide-button-block:focus {
-	background-color: #ea6153;
+
+.qa-part-form-profile .qa-form-wide-button-block {
+	text-indent: -9999px;
+	width: 3.9rem;
+	height: 2.2rem;
+	border: 1px solid #3d3d3d;
+	background: url(images/icons/block-user.png) no-repeat 1rem 0;
+}
+
+input.qa-form-wide-button.qa-form-wide-button-unblock {
+	text-indent: -9999px;
+	width: 3.9rem;
+	height: 2.2rem;
+	border: 1px solid #3d3d3d;
+	background: url(images/icons/unblock-user.png) no-repeat 1rem 0;
+}
+
+input.qa-form-wide-button.qa-form-wide-button-hideall {
+	text-indent: -9999px;
+	width: 3.9rem;
+	height: 2.2rem;
+	border: 1px solid #3d3d3d;
+	background: url(images/icons/hide-user.png) no-repeat 1rem 0;
+}
+
+input.qa-form-wide-button.qa-form-wide-button-delete {
+	text-indent: -9999px;
+	width: 3.9rem;
+	height: 2.2rem;
+	border: 1px solid #3d3d3d;
+	background: url(images/icons/delete-user.png) no-repeat 1rem 0;
 }
 
 tr#duration, tr#level, tr#permits, tr#email, tr#lastlogin, tr#lastwrite, tr#userfield-4, tr#userfield-5, tr#userfield-6 {
@@ -2017,16 +2066,16 @@ tr > td.badge-user-table {
 }
 
 #level .qa-form-wide-static a:first-child {
-	background: #27ae60 url('images/icons/mail-white.png') no-repeat 5px center;
-	padding: 2px 5px 2px 25px;
-	border: 1px solid #1e8449;
+	background: transparent url('images/icons/mail-white.png') no-repeat center;
+	padding: 5px 30px;
+	border: 1px solid #4d4d4d;
 	display: inline-block;
-	color: #fff;
+	text-indent: -9999px;
+	border-radius: 4px;
+	margin-left: 1rem;
 }
-#level .qa-form-wide-static a:hover:first-child, #level .qa-form-wide-static a:focus:first-child {
-	background-color: #2ecc71;
-	background-image: url('images/icons/mail-white.png');
-	border: 1px solid #25a25a;
+#level .qa-form-wide-static a:hover:first-child, #level .qa-form-wide-static a:focus:first-child {;
+	border: 1px solid #fff;
 	color: #fff;
 	text-decoration: none;
 }
@@ -2737,9 +2786,6 @@ span.qa-q-view-avatar a img, img.qa-avatar-image {
 	border: 1px solid #2d2d2d;
 	padding: 16px;
 }
-.qa-c-list-item .qa-form-light-button:hover, .qa-c-list-item .qa-form-light-button:focus {
-	background-color: #d6dadb;
-}
 .qa-c-list-item .qa-form-light-button a, .qa-c-list-item .qa-form-light-button a:hover {
 	color: #34495e;
 }
@@ -2775,7 +2821,7 @@ span.qa-q-view-avatar a img, img.qa-avatar-image {
 }
 .qa-c-list-item .qa-form-light-button-delete {
 	background-image: url('images/icons/delete-icon.png');
-	padding: 24px;
+	padding: 16px 32px;
 }
 .qa-c-list-item .qa-form-light-button-approve {
 	background-image: url('images/icons/approve-icon.png');
@@ -3332,6 +3378,11 @@ span.qa-q-view-avatar a img, img.qa-avatar-image {
 	right:0;
 	bottom:0;
 	position:absolute;
+}
+
+form[name=admin_form] tr, form[name=points_form] tr {
+	display: flex;
+	flex-direction: column;
 }
 
 @media (max-width: 979px) {
